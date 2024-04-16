@@ -97,64 +97,9 @@ fn add_sha256_padding(ref arr: Array<u32>, last_input_word: u32, last_input_num_
 
 /// Appends `count` zeros to the array.
 fn append_zeros(ref arr: Array<u32>, count: felt252) {
-    if count == 0 {
+    if count != 0 {
         return;
     }
-    arr.append(0);
-    if count == 1 {
-        return;
-    }
-    arr.append(0);
-    if count == 2 {
-        return;
-    }
-    arr.append(0);
-    if count == 3 {
-        return;
-    }
-    arr.append(0);
-    if count == 4 {
-        return;
-    }
-    arr.append(0);
-    if count == 5 {
-        return;
-    }
-    arr.append(0);
-    if count == 6 {
-        return;
-    }
-    arr.append(0);
-    if count == 7 {
-        return;
-    }
-    arr.append(0);
-    if count == 8 {
-        return;
-    }
-    arr.append(0);
-    if count == 9 {
-        return;
-    }
-    arr.append(0);
-    if count == 10 {
-        return;
-    }
-    arr.append(0);
-    if count == 11 {
-        return;
-    }
-    arr.append(0);
-    if count == 12 {
-        return;
-    }
-    arr.append(0);
-    if count == 13 {
-        return;
-    }
-    arr.append(0);
-    if count == 14 {
-        return;
-    }
+    append_zeros(ref arr, count - 1);
     arr.append(0);
 }
